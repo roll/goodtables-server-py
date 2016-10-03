@@ -6,7 +6,7 @@
 [![SemVer](https://img.shields.io/badge/versions-SemVer-brightgreen.svg)](http://semver.org/)
 [![Gitter](https://img.shields.io/gitter/room/frictionlessdata/chat.svg)](https://gitter.im/frictionlessdata/chat)
 
-Experimental non-blocking server for goodtables.next [now working for now].
+Experimental non-blocking server for goodtables.next [not-working for now].
 
 ## Features
 
