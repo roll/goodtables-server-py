@@ -21,8 +21,8 @@ def read(*paths):
 PACKAGE = 'goodtables_server'
 NAME = PACKAGE.replace('_', '-')
 INSTALL_REQUIRES = [
-    'goodtables>=1.0,<2.0a',
-    'aiohttp>=0.22,<0.23a',
+    'goodtables>=1.0a,<2.0a',
+    'aiohttp>=0.22,<1.0a',
 ]
 TESTS_REQUIRE = [
     'pylama',
@@ -42,6 +42,11 @@ setup(
     install_requires=INSTALL_REQUIRES,
     tests_require=TESTS_REQUIRE,
     extras_require={'develop': TESTS_REQUIRE},
+    entry_points={
+        'console_scripts': [
+            'goodtables-server = goodtables_server.cli:cli',
+        ]
+    },
     zip_safe=False,
     long_description=README,
     description='{{ DESCRIPTION }}',

@@ -4,27 +4,14 @@
   <meta charset="UTF-8">
   <title>Goodtables</title>
 </head>
-<body>
+<body style="font-size: 1.5em">
   <h1>Goodtables</h1>
-  <ul>
-    <li>
-      table -
-      <a target="_blank" href="https://goodtables-next-api.herokuapp.com?source=https://raw.githubusercontent.com/frictionlessdata/example-data-packages/master/inflation/data/inflation-gdp.csv">
-        https://github.com/frictionlessdata/example-data-packages/blob/master/inflation/data/inflation-gdp.csv
-      </a>
-    </li>
-    <li>
-      datapackage -
-      <a target="_blank" href="https://goodtables-next-api.herokuapp.com?source=https://raw.githubusercontent.com/frictionlessdata/example-data-packages/master/inflation/datapackage.json&profile=datapackage">
-        https://github.com/frictionlessdata/example-data-packages/blob/master/inflation/datapackage.json
-      </a>
-    </li>
-    <li>
-      ckan -
-      <a target="_blank" href="https://goodtables-next-api.herokuapp.com?source=http://data.surrey.ca&profile=ckan">
-        http://data.surrey.ca
-      </a>
-    </li>
-  </ul>
+  <form action="https://goodtables-server.herokuapp.com" method="GET" target="_blank">
+    <h3>Source</h3>
+    <p><input type="text" name="source" style="width:100%; padding: 10px 0; font-size: 1em;"></p>
+    <h3>Schema</h3>
+    <p><input type="text" name="schema" style="width:100%; padding: 10px 0; font-size: 1em;"></p>
+    <p><input type="submit" style="font-size: 1em;"></p>
+  </form>
 </body>
 </html>

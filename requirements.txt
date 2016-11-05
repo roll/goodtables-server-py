@@ -1,2 +1,1 @@
-git+git://github.com/frictionlessdata/jsontableschema-py.git@master
-git+git://github.com/roll/goodtables-server.git@master
+git+git://github.com/frictionlessdata/goodtables-server-py.git@master

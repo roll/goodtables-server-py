@@ -6,20 +6,27 @@
 [![SemVer](https://img.shields.io/badge/versions-SemVer-brightgreen.svg)](http://semver.org/)
 [![Gitter](https://img.shields.io/gitter/room/frictionlessdata/chat.svg)](https://gitter.im/frictionlessdata/chat)
 
-Experimental non-blocking server for goodtables.next [non-working for now].
+Experimental non-blocking server for goodtables.next.
 
 ## Features
 
+- non-blocking tabular data inspection and validation
+
 ## Getting Started
 
-## Documentation
+### Installation
 
-### CLI
+```bash
+$ pip install git+git://github.com/roll/goodtables-server.git@master
+# $ pip install goodtables-server - under development
+```
+
+### Example
 
 A server could be started via CLI:
 
 ```
-$ python -m goodtables_server.cli --port 5000 --path /api
+$ goodtables-server --port 5000 --path /api
 ======== Running on http://localhost:5000/ ========
 (Press CTRL+C to quit)
 ```
@@ -32,9 +39,7 @@ http://localhost:5000/api?source=data/invalid.csv
 
 And a report (the same as in the initial example) will be returned as JSON response to the browser.
 
-## FAQ
-
-### How to start API with customized inspector?
+### Custom inspector
 
 Create python module named like `custom.py`:
 
@@ -46,14 +51,14 @@ inspector = Inspector(checks, table_limit, row_limit, error_limit)
 
 And run API pointing to the `inspector` instance:
 
+```bash
+$ python -m goodtables.api --inspector custom.inspector
 ```
-$ python -m goodtables.api --inspector custom:inspector
 
+## Contributing
 
-## Read More
+Please read the contribution guideline:
 
-- [Docstrings](https://github.com/frictionlessdata/goodtables-server-py/tree/master/goodtables_server)
-- [Changelog](https://github.com/frictionlessdata/goodtables-server-py/commits/master)
-- [Contribute](CONTRIBUTING.md)
+[How to Contribute](CONTRIBUTING.md)
 
 Thanks!
