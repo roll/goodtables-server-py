@@ -52,7 +52,7 @@ inspector = Inspector(checks, table_limit, row_limit, error_limit)
 And run API pointing to the `inspector` instance:
 
 ```bash
-$ python -m goodtables.api --inspector custom.inspector
+$ goodtables-server --inspector custom.inspector
 ```
 
 ## Contributing
