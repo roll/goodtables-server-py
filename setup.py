@@ -22,7 +22,7 @@ PACKAGE = 'goodtables_server'
 NAME = PACKAGE.replace('_', '-')
 INSTALL_REQUIRES = [
     'tabulator>=0.12,<1.0a',  # This dependency could be removed later
-    'goodtables>=1.0a,<2.0a',
+    'goodtables>=1.0a4,<2.0a',
     'aiohttp>=0.22,<1.0a',
 ]
 TESTS_REQUIRE = [
